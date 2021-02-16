@@ -2,8 +2,9 @@
 
 let pagenum = 1 ;
 let idcard = ["default"];
+let xf = "";
 $( "#switch").on( "click", function() {
-    console.log("hi");
+    
     if(pagenum == 1 ){
         pagenum = 2;
     }else{
@@ -11,27 +12,35 @@ $( "#switch").on( "click", function() {
     }
     $("main").text("");
     idcard = ["default"];
-    console.log(idcard);
-    all();
+    if(xf == "sort"){
+        all("sort");
+    }else if (xf == "horns"){
+        all("horns");
+    }else{
+        all();
+    }
+    
   });
   $( "#sort").on( "click", function() {
     $("main").text("");
     idcard = ["default"];
-    console.log(idcard);
+     xf = "sort";
     all("sort");
   });
   $( "#horns").on( "click", function() {
+      xf = "horns";
     $("main").text("");
     idcard = ["default"];
-    console.log(idcard);
     all("horns");
   });
+
 all();
-function all(xf="farhan"){
-    console.log(xf);
+function all(xf="try"){
+   
     $.ajax(`data/page-${pagenum}.json`)
     .then(data=>{
         if(xf == "sort"){
+           
             data.sort(function(a, b) {
                 var nameA = a.title.toUpperCase(); // ignore upper and lowercase
                 var nameB = b.title.toUpperCase(); // ignore upper and lowercase
@@ -45,6 +54,7 @@ function all(xf="farhan"){
               });
         }
         if(xf == "horns"){
+            
             data.sort(function (a, b) {
                 return a.horns - b.horns;
               });
@@ -62,16 +72,22 @@ function all(xf="farhan"){
         this.image_url=value.image_url;
     }
     card.prototype.render=function(){
-        let cardClone = $('.photo-template').clone();
-        cardClone.removeClass('photo-template');
-        cardClone.addClass(this.keyword);
-        cardClone.find('.h22').text(this.title);
-        cardClone.find('img').attr("src",this.image_url);
-         cardClone.find('img').attr("width","200px");
-        cardClone.find('p').text(this.description);
-        $('main').append(cardClone);
+        // let cardClone = $('.photo-template').clone();
+        // cardClone.removeClass('photo-template');
+        // cardClone.addClass(this.keyword);
+        // cardClone.find('.h22').text(this.title);
+        // cardClone.find('img').attr("src",this.image_url);
+        //  cardClone.find('img').attr("width","200px");
+        // cardClone.find('p').text(this.description);
+        // $('main').append(cardClone);
+        let template = $('#templateCard').html();
+        // console.log(this);
+        let newObj = Mustache.render(template,this);
+        // console.log(newObj);
         if(!(idcard.includes(this.keyword))){
             idcard.push(this.keyword);}
+        $('main').append(newObj);
+       
     }
     // console.log(idcard);
     $('select').on('change',function(){

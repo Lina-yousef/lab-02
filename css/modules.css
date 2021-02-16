@@ -1,8 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital@1&display=swap');
+div h2 {
+  margin: 0;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Newsreader', serif;
+}
+div img {
+  margin: 0;
+  position: absolute;
+  max-height: 150px;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+div p {
+  margin: 0;
+  position: absolute;
+  top: 88%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: smaller;
+}
 .photo-template{
+<<<<<<< HEAD
+    display: none;
+}
+#lo-engage-ext-container{
+  display: none;
+}
+button{
+  border: none;
+  color: aliceblue;
+  background-color: salmon;
+  border-radius: 0;
+}
+button:hover{
+  color: salmon;
+  background-color: aliceblue;
+  border: 1px salmon solid;
+=======
     visibility: hidden;
 
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
 
+>>>>>>> 91bbead85373e345eed1e3947a1154a4d029434d
 }

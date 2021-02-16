@@ -11,13 +11,13 @@
     <link rel="stylesheet" href="css/layouts.css">
     <link rel="stylesheet" href="css/modules.css">
 
-     <!-- <script id="templateCard" type='text/x-templ-mustache'>
-    <div>
+     <script id="templateCard" type='text/x-templ-mustache'>
+    <div class="{{keyword}}">
       <h2>{{title}}</h2>
-      <img src="{{image_url}}" alt="">
+      <img src="{{image_url}}" alt="{{title}}">
       <p>{{description}}</p>
     </div>
-    </script> -->
+    </script>
 
   </head>
   <body>
@@ -31,18 +31,17 @@
       <button value="sort" id="sort">Title</button>
       <button value="horns" id="horns">Horns</button>
     </header>
-    <div class="photo-template">
+    <!-- <div class="photo-template">
       <h2 class = "h22"></h2>
       <img src="" alt="">
       <p></p>
-    </div>
+    </div> -->
     <main>
     </main>
     <button value="switch" id="switch">Switch Page</button>
     <footer>
       &copy; 2018 Code Fellows
     </footer>
-     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.1.0/mustache.min.js" integrity="sha512-HYiNpwSxYuji84SQbCU5m9kHEsRqwWypXgJMBtbRSumlx1iBB6QaxgEBZHSHEGM+fKyCX/3Kb5V5jeVXm0OglQ==" crossorigin="anonymous"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.1.0/mustache.min.js"></script>
     <script src=https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js></script>
     <script src="app.js"></script>
