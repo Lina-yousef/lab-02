@@ -1,4 +1,5 @@
 'use strict';
+
 let pagenum = 1 ;
 let idcard = ["default"];
 let xf = "";
@@ -111,3 +112,4 @@ function renderid(){
     idcard.forEach(element => {
         $('select').append(`<option value="${element}">${element}</option>`);
     });}
+

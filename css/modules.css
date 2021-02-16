@@ -25,6 +25,7 @@ div p {
   font-size: smaller;
 }
 .photo-template{
+<<<<<<< HEAD
     display: none;
 }
 #lo-engage-ext-container{
@@ -40,4 +41,12 @@ button:hover{
   color: salmon;
   background-color: aliceblue;
   border: 1px salmon solid;
+=======
+    visibility: hidden;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+>>>>>>> 91bbead85373e345eed1e3947a1154a4d029434d
 }
