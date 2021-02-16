@@ -1,0 +1,6 @@
+.photo-template{
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,36 @@
+div{
+  border: 2px salmon solid;
+  display: inline-block;
+  width: 250px;
+  margin: 20px;
+  height: 400px;
+  text-align: center;
+  position: relative;
+  /* display: flex;
+ justify-content: space-between; */
+}
+div h2 {
+  order: 1;
+  margin: 0;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+div img {
+   order: 2;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+div p {
+   order: 3;
+  margin: 0;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: smaller;
+}
