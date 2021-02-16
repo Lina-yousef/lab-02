@@ -1,4 +1,5 @@
 'use strict';
+
 let pagenum = 1 ;
 let idcard = ["default"];
 $( "#switch").on( "click", function() {
@@ -95,3 +96,4 @@ function renderid(){
     idcard.forEach(element => {
         $('select').append(`<option value="${element}">${element}</option>`);
     });}
+
