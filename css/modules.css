@@ -1,4 +1,8 @@
 .photo-template{
     visibility: hidden;
-    display: inline;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
 }

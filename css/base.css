@@ -3,5 +3,7 @@ body{
   margin-right: auto;
   width: 90%;
   text-align: center;
-}
 
+/*   display: flex;
+  flex-direction: column; */
+}
