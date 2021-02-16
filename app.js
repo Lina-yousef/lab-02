@@ -18,20 +18,24 @@ function card (value){
     this.image_url=value.image_url;
 }
 
-card.prototype.render=function(){
+// card.prototype.render=function(){
 
-    let cardClone = $('.photo-template').clone();
-    cardClone.removeClass('photo-template');
-    cardClone.addClass(this.keyword);
-    cardClone.find('.h22').text(this.title);
-    cardClone.find('img').attr("src",this.image_url);
-     cardClone.find('img').attr("width","200px");
-    cardClone.find('p').text(this.description);
-    $('main').append(cardClone);
-    if(!(idcard.includes(this.keyword))){
-        idcard.push(this.keyword);}
-}
-console.log(idcard);
+//     let cardClone = $('.photo-template').clone();
+//     cardClone.removeClass('photo-template');
+//     cardClone.addClass(this.keyword);
+//     cardClone.find('.h22').text(this.title);
+//     cardClone.find('img').attr("src",this.image_url);
+//      cardClone.find('img').attr("width","200px");
+//     cardClone.find('p').text(this.description);
+//     $('main').append(cardClone);
+//     if(!(idcard.includes(this.keyword))){
+//         idcard.push(this.keyword);}
+// }
+// console.log(idcard);
+
+let template = $('#templateCard'.html());
+let newObj = Mustache.render(template,this);
+return newObj;
 
 function renderid(){
 idcard.forEach(element => {
