@@ -14,7 +14,7 @@
      <script id="templateCard" type='text/x-templ-mustache'>
     <div class="{{keyword}}">
       <h2>{{title}}</h2>
-      <img src="{{image_url}}" alt="{{title}}">
+       <img src="{{image_url}}" alt="{{title}}" style = "width : 200px">
       <p>{{description}}</p>
     </div>
     </script>
@@ -26,7 +26,6 @@
       <select>
         <option value="default">Filter by Keyword</option>
       </select>
-
       <span>Sort By: </span>
       <button value="sort" id="sort">Title</button>
       <button value="horns" id="horns">Horns</button>
@@ -45,7 +44,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.1.0/mustache.min.js"></script>
     <script src=https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js></script>
     <script src="app.js"></script>
-  
   </body>
 </html>
 
