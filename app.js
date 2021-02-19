@@ -1,7 +1,7 @@
 'use strict';
 
 let idcard = [];
-$.ajax('./page-1.json')
+$.ajax('page-1.json')
 .then(data=>{
 data.forEach((item)=>{
    
@@ -31,11 +31,7 @@ card.prototype.render=function(){
     if(!(idcard.includes(this.keyword))){
         idcard.push(this.keyword);}
 }
-console.log(idcard);
-
-// let template = $('#templateCard'.html());
-// let newObj = Mustache.render(template,this);
-// return newObj;
+// console.log(idcard);
 
 function renderid(){
 idcard.forEach(element => {
@@ -45,7 +41,7 @@ idcard.forEach(element => {
 
 
 $('select').on('change',function(){
-    console.log($(this).val());
+    // console.log($(this).val());
     for(let i = 0; i <idcard.length ; i++){
          $(`.${idcard[i]}`).css('display','');
          
