@@ -34,8 +34,17 @@ $( "#switch").on( "click", function() {
     all("horns");
   });
 
+
+// let template = $('#templateCard'.html());
+// let newObj = Mustache.render(template,this);
+// return newObj;
+
+function renderid(){
+idcard.forEach(element => {
+
 all();
 function all(xf="try"){
+
    
     $.ajax(`data/page-${pagenum}.json`)
     .then(data=>{
